@@ -3,16 +3,16 @@ import { View, Text } from 'react-native';
 
 import { styles } from './styles';
 
-const ProductDetail = () => {
+const Home = () => {
   
 
   return (
     <View style={styles.container}>
-        <Text style={styles.title }>ProductDetail</Text>
+        <Text style={styles.title }>Bienvenido, en esta sección vamos a mostrar la info del reciclaje de avellaneda</Text>
 
     </View>
 
   );
 };
 
-export default ProductDetail;
+export default Home;

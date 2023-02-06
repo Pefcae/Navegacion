@@ -8,6 +8,7 @@ export const styles = StyleSheet.create({
     backgroundColor: THEME.colors.background,
     justifyContent:'center',
     alignItem:'center',
+    //marginTop: isAndroid ? StatusBar.currentHeight : 0,
   },
   title: {
     fontSize: 18,
@@ -15,5 +16,7 @@ export const styles = StyleSheet.create({
     color: THEME.colors.title,
     padding: 10,
   },
-  
+  //containerList: {
+//    flex: 1,
+//  },
 });

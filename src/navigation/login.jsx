@@ -1,6 +1,6 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { THEME } from '../constants/theme';
-import { Categories, ProductDetail, Products } from '../screens/index';
+import { Welcome, SignIn, SingUp ,Home} from '../screens/index';
 import { View, Text, TouchableOpacity } from 'react-native';
 
 
@@ -12,7 +12,7 @@ const Stack = createNativeStackNavigator();
 const ShopNavigator = () => {
   return (
     <Stack.Navigator  
-    initialRouteName="Categories"
+    initialRouteName="Welcome"
     screenOptions={{
       headerTintColor: THEME.colors.primary, // color del header
       navigationBarColor: THEME.colors.secondary, // color a la barra inferior solo android
@@ -23,18 +23,18 @@ const ShopNavigator = () => {
         }}
     >
       <Stack.Screen 
-        name="Categories" 
-        component={Categories} 
+        name="Welcome" 
+        component={Welcome} 
         options={{
-        title:'Categorias'
+        title:'Welcome'
         }}
       />
       <Stack.Screen 
-        name="Products"   
-        component={Products} 
+        name="SingUp"   
+        component={SingUp} 
         options={{
             headerShow: false,
-            title:'Productos',
+            title:'SingUp',
             headerRight:()=>{ //serviría para la foto de perfil?
               return(
                 <TouchableOpacity>
@@ -46,14 +46,25 @@ const ShopNavigator = () => {
             }}
       />
       <Stack.Screen 
-        name="ProductDetail" 
-        component={ProductDetail}
+        name="SignIn" 
+        component={SignIn}
         options={{
             headerShow: false,
-            title:'Detalle del Producto'
+            title:'SignIn'
             }}
       />
+       <Stack.Screen 
+        name="Home" 
+        component={Home}
+        options={{
+            headerShow: false,
+            title:'Home'
+            }}
+      />
+
     </Stack.Navigator>
+
+      
   );
 };
 
